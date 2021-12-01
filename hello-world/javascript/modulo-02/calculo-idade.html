@@ -1,0 +1,29 @@
+<html>
+    <body>
+        <script>
+            
+            // exercicio #2
+
+            var anoNascimento = prompt("Por favor informe o ano do seu nascimento");
+            
+            // validacao do ano de nascimento
+            while(anoNascimento > 2021){
+                alert("Por favor informe seu ano de nascimento corretamente!")
+                anoNascimento = prompt("Por favor informe o ano do seu nascimento");
+            }
+
+            var anoAtual = prompt("E qual o ano atual?");
+
+            // validacao do ano atual
+            while(anoAtual < anoNascimento){
+                alert("Ano atual não pode ser menor que ano nascimeno");
+                anoAtual = prompt("E qual o ano atual?");
+            }
+
+            var idadeFinal = anoAtual - anoNascimento;
+            
+            alert("A idade final é: " +  idadeFinal)
+
+        </script>
+    </body>
+</html>
