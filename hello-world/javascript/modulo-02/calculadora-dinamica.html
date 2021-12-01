@@ -4,6 +4,51 @@
             
             // exercicio #3 - aplicacao calculadora dinamica
 
+            // Queremos um número inicial
+            // Queremos um sinal (tipo de operação)
+            // Quero um número final
+            
+            var resultadoFinal = 0;
+            var numeroInicial = prompt('Informe o primeiro número...');
+
+            if (numeroInicial != ''){
+                numeroInicial = parseInt(numeroInicial);
+            }
+            
+            while(numeroInicial == '' || numeroInicial == 0){
+                alert('Preencha o numero incial corretamente, por favor...')
+                numeroInicial = prompt('Informe o primeiro número...');
+            }
+  
+            var sinal = prompt('Informe o sinal da sua operação...');
+
+            while(sinal != '-' && sinal != '+' && sinal != '/' && sinal != '*'){
+                alert('Preencha o sinal corretamente, por favor...')
+                sinal = prompt('Informe o sinal da sua operação...');
+            }
+
+            var numeroFinal = prompt('Informe o número final...');
+
+            if (numeroFinal != ''){
+                numeroFinal = parseInt(numeroFinal);
+            }
+
+            while(numeroFinal == '' || numeroFinal == 0){
+                alert('Preencha o numero final corretamente, por favor...')
+                numeroFinal = prompt('Informe o número final...');
+            } 
+
+            if(sinal == '+'){
+                resultadoFinal = numeroInicial + numeroFinal
+            }else if(sinal == '-'){
+                resultadoFinal = numeroInicial - numeroFinal
+            }else if(sinal == '/'){
+                resultadoFinal = numeroInicial / numeroFinal
+            }else if(sinal == '*'){
+                resultadoFinal = numeroInicial * numeroFinal
+            }
+
+            alert('O resultado final é: ' + resultadoFinal)
   
 
         </script>
