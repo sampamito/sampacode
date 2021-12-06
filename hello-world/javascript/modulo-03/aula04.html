@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <script>
+            // classes
+            class Animal{
+                constructor(nome){
+                    this.nome = nome;
+                }
+
+                printNome(){
+                    return this.nome;
+                }
+            }
+            
+            /* 
+            declaro uma nova classe e utilizo do tudo da outra classe
+            utilizando o 'extends' e o super chama o metodo construtor da 
+            outra classe
+            Animal - Classe Pai
+            Cachorro - Classe Filha
+            */
+            class Cachorro extends Animal{
+                constructor(nome){
+                    super(nome);
+                    this.raca = 'Vira Lata';
+                }
+
+                printRaca(){
+                    return this.raca;
+                }
+            }
+
+            animal = new Animal('Gato');
+
+            alert(animal.printNome());
+
+            cachorro = new Cachorro('Belinha');
+
+            alert(cachorro.printNome());
+
+            alert(cachorro.printRaca());
+
+        </script>
+    </body>
+</html>
