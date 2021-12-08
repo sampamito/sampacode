@@ -1,0 +1,20 @@
+<html>
+
+<body>
+    <!-- aula 05 - dominando querySelectorAll -->
+    <div class="testes">
+        <div class="inside-testes">Este aqui é um Texto!</div>
+    </div>
+    <div class="testes">
+        <div class="inside-testes">Este aqui é outro Texto!</div>
+    </div>
+
+    <script>
+        var els = document.querySelectorAll('.testes .inside-testes');
+        els[0].style.color = 'red';
+        els[0].innerHTML = '<div class="inside-testes-via-js">' + els[0].innerHTML + ' foi manipulado via JS </div>';
+    </script>
+
+</body>
+
+</html>

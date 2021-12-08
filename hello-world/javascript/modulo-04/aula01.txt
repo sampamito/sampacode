@@ -1,0 +1,16 @@
+O que é DOM?
+> Document Object Model ou Modelo de Objeto do Documento;
+> É uma forma de representação do documento (página web);
+> Através do JavaScript conseguimos acessar o DOM e manipular nosso documento.
+
+Tipos de dados que conseguimos acessar.
+> Document: O Próprio documento;
+> Node: Um nó de algum objeto. (Ex: <div><p></p></div>);
+> Elemento: O Elemento de forma individual que possamos acessar. (divs, p, span, etc...);
+
+Como manipular o DOM?
+> Funções do Próprio JavaScript direto do navegador;
+>> getElementById(), querySelector(), etc...
+> DOM != JavaScript
+>> É importante falar que o DOM é uma forma de representar o documento e não se limita apenas a JavaScript. 
+Apesar de que na maioria das vezes é utilizado de tal forma.
