@@ -1,0 +1,57 @@
+<html>
+
+<body>
+    <!-- aula 07 - mais sobre animacoes com javascript -->
+    <style>
+        .conteudo h2 span {
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .conteudo p {
+            overflow: hidden;
+            height: 10;
+            transition: 1s;
+        }
+
+        .mostrar{
+            height: 200px !important;
+        }
+    </style>
+
+    <div class="conteudo">
+        <h2>Titulo do conteudo - Aula 07 <span>Ver mais!</span></h2>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam, culpa quos repellat mollitia ratione
+            in, numquam consequuntur vel dignissimos aliquid soluta a obcaecati vero nesciunt necessitatibus
+            perspiciatis, tenetur libero cumque?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis aperiam sed animi aliquid quaerat
+            iusto ipsa, quod sunt. Architecto soluta reprehenderit doloremque deleniti non porro quo aliquid esse
+            deserunt.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quis aperiam sed animi aliquid quaerat
+            iusto ipsa, quod sunt. Architecto soluta reprehenderit doloremque deleniti non porro quo aliquid esse
+            deserunt.
+        </p>
+    </div>
+
+    <script>
+
+            var span = document.querySelectorAll('.conteudo span')[0];
+    
+            span.addEventListener('click',()=>{
+                //document.querySelector('.conteudo p').classList.add('mostrar');
+                var conteudo = document.querySelector('.conteudo p');            
+
+                if(conteudo.classList.contains('mostrar')){
+                    span.innerHTML = 'Ver mais...'
+                    conteudo.classList.remove('mostrar');
+                }else{
+                    span.innerHTML = 'Ocultar...'
+                    conteudo.classList.add('mostrar');                    
+                }
+            });
+    </script>
+
+</body>
+
+</html>
