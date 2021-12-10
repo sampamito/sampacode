@@ -1,0 +1,18 @@
+- O que é Ajax?
+>> Conceitos
+- Asynchronous Javascript and XML]
+- Requisições depois da página ter finalizado seu carregamento
+- Não é necessário atualizar a página
+
+>> Como utilizamos?
+- Através de funções do Javascript;
+    -- Fetch(), XMLHttpRequest(), etc...
+- Atualmente é muito mais fácil do que antigamente!
+
+>> Requisições
+
+Cliente <> Servidor
+- Via XML Response 
+- Via JSON Response
+
+Cliente - Html Page(DOM)
