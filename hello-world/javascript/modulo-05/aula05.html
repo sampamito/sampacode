@@ -1,0 +1,39 @@
+<html>
+<!-- rest e spread -->
+
+<body>
+    <script>
+
+        //fazendo spread
+        var nomes = [
+            {
+                nome: 'Mayara'
+            },
+            {
+                nome: 'Lucia'
+            }
+        ];
+
+        const objetos = [...nomes,{
+            nome: 'Guilherme'
+        }];
+
+        console.log(objetos);
+
+        //fazendo rest
+        function testeRest(...numero){
+            console.log(numero);
+        }
+
+        testeRest(1,2,3,4,5,6,7,8);
+
+        function testeRest2(...numero){
+            console.log(numero[0][0]);
+        }
+
+        testeRest2([1,2,3,4,5,6,7,8]);
+
+    </script>
+</body>
+
+</html>
