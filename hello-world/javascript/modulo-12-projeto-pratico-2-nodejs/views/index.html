@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Lista de Tarefas | Projeto NodeJs</title>
+        <link href="/public/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="tasks">
+            <form method="post">
+                <input type="text" name="task" />
+                <input type="submit" name="action" value="Inserir" />
+            </form>
+            <% for(let i = 0; i < tasksList.length; i++){ %>
+                
+                <p><%= tasksList[i] %> | <a href="/delete/<%= i %>">X</a></p>
+
+            <% } %>
+        </div>
+    </body>
+</html>
