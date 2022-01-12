@@ -157,3 +157,47 @@ body {
 .iconSingle.emoji svg {
     color: yellow;
 }
+
+.iconSingle span{
+    font-weight: bold;
+    color: gray;
+    margin: 0 10px;
+}
+
+.feedPostSingle{
+    margin: 20px 0;
+    background-color: white;
+}
+
+.feedPostSingle__profile{
+    padding: 10px;
+}
+
+.feedPostSingle__profile h3{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 8px 20px;
+}
+
+.feedPostSingle__profile h3 > span{
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.feedPostSingle__profile img{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 20px;
+}
+
+.feedPostSingle__content p{
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.feedPostSingle__content img{
+    width: 100%;
+    display: block;
+}
