@@ -18,8 +18,8 @@ function App() {
       }
     })
 
-    db.collection('posts').orderBy('timestamp','desc').onSnapshot((snapchot)=>{
-      setPosts(snapchot.docs.map((document)=>{
+    db.collection('posts').orderBy('timestamp','desc').onSnapshot((snapshot)=>{
+      setPosts(snapshot.docs.map((document)=>{
         return{id:document.id,info:document.data()}
       }))
     })

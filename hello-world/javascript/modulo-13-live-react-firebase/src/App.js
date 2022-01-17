@@ -3,10 +3,26 @@ import Header from './Header';
 import Stories from './Stories';
 import Feed from './Feed';
 import FeedPosts from './FeedPosts';
-import profile from './resources/profile.jpg'
-import { AiFillVideoCamera, AiOutlineFileImage, AiOutlineMeh } from "react-icons/ai"
+import profile from './resources/profile.jpg';
+import { AiFillVideoCamera, AiOutlineFileImage, AiOutlineMeh } from "react-icons/ai";
+
+import { useState, useEfect, useEffect } from 'react';
+import { db } from '../src/firebase.js';
 
 function App() {
+
+  const [posts, setPosts] = useState([]);
+
+  // executa uma vez ao iniciar a pagina
+  useEffect(() => {
+    db.collection('posts').onSnapshot((snapshot) => {
+      setPosts(snapshot.docs.map((doc) => {
+        console.log(doc.data());
+        return { info: doc.data() }
+      }));
+    })
+  }, [])
+
   return (
     <div className="App">
 
@@ -18,18 +34,15 @@ function App() {
 
       { /* componente de feed */}
       <Feed />
+      {
+        posts.map((val) => {
+          return (
 
-      { /* componente de posts do feed 1 */}
-      <FeedPosts name="Guilherme Sampaio" postContent="Como o homem aranha derrotou o Dr. Estranho!" hour="4" />
+            <FeedPosts name={val.info.name} postContent={val.info.content} image={val.info.image} hour="4" />
 
-      { /* componente de posts do feed 2 */}
-      <FeedPosts name="Guilherme Sampaio" postContent="Como o homem aranha derrotou o Dr. Estranho!" hour="4" />
-
-      { /* componente de posts do feed 3 */}
-      <FeedPosts name="Guilherme Sampaio" postContent="Como o homem aranha derrotou o Dr. Estranho!" hour="4" />
-
-      { /* componente de posts do feed 4 */}
-      <FeedPosts name="Guilherme Sampaio" postContent="Como o homem aranha derrotou o Dr. Estranho!" hour="4" />
+          )
+        })
+      }
 
     </div>
   );

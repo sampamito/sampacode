@@ -12,7 +12,7 @@ export default function (props) {
                 <div className="feedPostSingle__content" >
                     <p>{props.postContent}<br />
                         https://www.youtube.com/watch?v=mFUUCLBAsno</p>
-                    <img src={postContent} />
+                    <img src={props.image} />
                 </div>
             </div>
         </div>
