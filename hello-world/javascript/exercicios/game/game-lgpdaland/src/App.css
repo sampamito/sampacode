@@ -1,0 +1,260 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(153, 146, 146);
+}
+
+.center{
+  display: flex;
+  margin: 0 auto;
+  padding: 0 2%;
+  max-width: 1100px;
+}
+
+.header{
+  padding: 10px 0;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 2px rgb(230, 230, 230);
+}
+
+.header__logo{
+  width: 50%;
+}
+
+.header__logo img{
+  width: 30%;
+}
+
+.header__loginForm{
+  width: 50%;
+  text-align: right;
+}
+
+.header__loginForm form{
+  display: inline-block;
+}
+
+.header__loginForm input[type=text], .header__loginForm input[type=password]{
+  width: 120px;
+  margin-right: 5px;
+  height: 20px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  border-radius: 10px;
+}
+
+.header__loginForm input[type=submit]{
+  background-color: red;
+  color: white;
+  border: 0;
+  height: 20px;
+  padding: 0px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 10px;
+}
+
+.btn__newAccount{
+  display: inline-block;
+}
+
+.btn__newAccount a{
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.header__loginInfo{
+  text-align: right;
+  width: 50%;
+  color:rgb(230, 230, 230)
+
+}
+
+.header__loginInfo a{
+  margin: 0 10px;
+  background-color: red;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 3px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.header__loginInfo img{
+  width: 5%;
+}
+
+.header__loginInfo p{
+  margin: 0 10px;
+}
+
+
+.modalCreateAccount{
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.formCreateAccount{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+}
+
+.formCreateAccount input{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+}
+
+.formCreateAccount input[type="submit"]{
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.close-modal-create{
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: red;
+  text-align: center;
+  color: white;
+  line-height: 30px;
+}
+
+.modalUpload{
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.formUpload{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  padding: 50px;
+  width: 80%;
+  max-width: 700px;  
+  max-height:100%;
+  overflow-y: scroll;
+}
+
+.formUpload input{
+  width: 100%;
+  height: 30px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border: 1px solid #ccc;
+}
+
+.formUpload input[type="submit"]{
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}
+
+.formUpload input[type="radio"]{  
+  color: white;
+  cursor: pointer;
+  width: 0 10px;
+}
+
+.close-modal-upload{
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: red;
+  text-align: center;
+  color: white;
+  line-height: 30px;
+}
+
+.postSingle{
+  background-color: white;
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.postSingle img{
+  width: 100%;
+}
+
+.postSingle p{
+  padding: 10px;
+}
+
+.postSingle textarea{
+  width: 100%;
+  height: 120px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.postSingle input[type="submit"]{
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  padding: 8px 10px;
+}
+
+.comments{
+  margin-left: 20px;
+}
+
+.comments h4{
+  border-bottom: 1px solid #4b4b4b;
+  padding-bottom: 8px 0;
+  color: #4b4b4b;
+}
+
+.comment-single p{
+  font-size: 14px;
+}
+
+/* mobile phone */
+@media all and (max-width: 768px) {
+  #divContent{
+   overflow:auto; 
+  }
+}
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
